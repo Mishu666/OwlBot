@@ -1,0 +1,24 @@
+{
+  "name": "owlbot",
+  "version": "1.0.0",
+  "description": "cursed owls ow team discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mishu666/OwlBot.git"
+  },
+  "author": "Mishu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mishu666/OwlBot/issues"
+  },
+  "homepage": "https://github.com/Mishu666/OwlBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.1",
+    "overwatch-stats-api": "^2.1.0"
+  }
+}
