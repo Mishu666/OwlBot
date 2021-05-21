@@ -13,9 +13,9 @@ module.exports = {
 
     message.channel.send(
       "sr command usage:\n \
-        owl sr btag#0000 <role>\n \
-        available roles include:\n \
-        tank, dps, support, and all"
+      owl sr btag#0000 <role>\n \
+      available roles include:\n \
+      tank, dps, support, and all"
     );
 
     return true;
