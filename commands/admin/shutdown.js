@@ -1,4 +1,4 @@
-const config = require("../config.json");
+const config = require("../../config.json");
 
 module.exports = {
   name: "shutdown",
@@ -16,15 +16,12 @@ module.exports = {
       return false;
 
     if (message.author.id !== config.IDs.users.mishu) {
-      const insult =
-        config.insults[Math.floor(Math.random() * config.insults.length)];
-
       message.channel.send("you don't have permission to do that :o");
       return true;
     }
 
     await message.channel.send("going offline!");
-    message.client.destroy();
+    await message.client.destroy();
     return true;
   },
 };

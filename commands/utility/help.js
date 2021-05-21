@@ -1,4 +1,4 @@
-const config = require("../config.json");
+const config = require("../../config.json");
 
 module.exports = {
   name: "help",
@@ -15,7 +15,7 @@ module.exports = {
     )
       return false;
 
-    let valid_colors = config.preset_colors;
+      
     let msg = `available commands:\n
                 color, colors, ping, sr, srguide`;
 
