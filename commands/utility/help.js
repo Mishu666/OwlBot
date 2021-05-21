@@ -15,9 +15,7 @@ module.exports = {
     )
       return false;
 
-      
-    let msg = `available commands:\n
-                color, colors, ping, sr, srguide`;
+    let msg = `available commands:\ncolor, colors, ping, sr, srguide`;
 
     message.channel.send(msg.trim());
 
