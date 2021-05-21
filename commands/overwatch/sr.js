@@ -23,8 +23,6 @@ module.exports = {
     const roles = ["tank", "damage", "support", "all"];
     const btag = args[1];
 
-    console.log(btag);
-
     const hashtag_pos = btag.indexOf("#");
 
     if (hashtag_pos === -1) {
@@ -66,7 +64,7 @@ module.exports = {
 
       return true;
     } catch (error) {
-      switch (error) {
+      switch (error.message) {
         case "PROFILE_NOT_FOUND":
           message.channel.send("cannot find profile");
           return true;
@@ -76,7 +74,7 @@ module.exports = {
           return true;
 
         default:
-          message.channel.send(`different error`);
+          message.channel.send(`ERROR`);
           console.error(error);
           return true;
       }
