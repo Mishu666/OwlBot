@@ -11,12 +11,13 @@ module.exports = {
     if (!(args[0] === this.name || this.aliases.includes(args[0])))
       return false;
 
-    message.channel.send(
-      "sr command usage:\n \
-      owl sr btag#0000 <role>\n \
-      available roles include:\n \
-      tank, dps, support, and all"
-    );
+    let out_str =
+      `sr command usage:\n` +
+      `> owl sr btag#0000 <role>\n` +
+      `available roles include:\n` +
+      `> tank, damage, support, and all`;
+
+    message.channel.send(out_str);
 
     return true;
   },
