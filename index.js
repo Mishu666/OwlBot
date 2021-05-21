@@ -1,9 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const dotenv = require("dotenv");
-
 const fs = require("fs");
-
 const config = require("./config.json");
 
 dotenv.config();
@@ -13,14 +11,18 @@ dotenv.config();
 client.commands = new Discord.Collection();
 client.passive_commands = new Discord.Collection();
 
-const commandFiles = fs
-  .readdirSync("./commands/")
-  .filter((file) => file.endsWith(".js"));
+const commandFolders = fs.readdirSync("./commands");
 
-for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+for (const folder of commandFolders) {
+  const commandFiles = fs
+    .readdirSync(`./commands/${folder}`)
+    .filter((file) => file.endsWith(".js"));
 
-  client.commands.set(command.name, command);
+  for (const file of commandFiles) {
+    const command = require(`./commands/${folder}/${file}`);
+
+    client.commands.set(command.name, command);
+  }
 }
 
 //EVENT HANDLING

@@ -15,7 +15,7 @@ module.exports = {
 
     if (args.length !== 3) {
       message.channel.send(
-        `that's not how you use that ;-;\ntype "jarvis srguide/srhelp to learn how!"`
+        `that's not how you use that ;-;\ntype "owl srguide/srhelp to learn how!"`
       );
       return true;
     }
